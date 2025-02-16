@@ -181,7 +181,7 @@ def train():
                 else:
                     path = path[:pos] + "_" + str(nowStep)
                 os.makedirs(os.path.dirname(path), exist_ok=True)
-                print(velocity)
+                
                 torch.save(
                     {
                         "velocity": velocity.module.state_dict() if len(GPUs) > 0 else velocity.state_dict(),
